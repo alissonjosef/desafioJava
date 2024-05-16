@@ -12,7 +12,13 @@ public class ContaTerminal {
         ContaTerminal conta = new ContaTerminal();
 
         System.out.println("Por favor, digite o número da Agência:");
-        conta.agencia = scanner.nextLine();
+        String agenciaDigitada = scanner.nextLine();
+
+        if (agenciaDigitada.equals(conta.agencia)) {
+            System.out.println("Agência encontrada.");
+        } else {
+            System.out.println("Agência não encontrada.");
+        }
 
 
         System.out.println("Olá " + conta.nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é "
